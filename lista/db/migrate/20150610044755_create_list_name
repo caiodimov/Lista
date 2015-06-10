@@ -1,0 +1,12 @@
+class CreateListName < ActiveRecord::Migration
+  def change
+    create_table :list_name:strings do |t|
+      t.string :size
+      t.string :topic
+      t.string :content
+
+      t.timestamps
+
+    end
+  end
+end
