@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+
+  # Routes for Lista creation:
+  # CREATE
+  get "/lista/new", :controller => "lista", :action => "new"
+  post "/create_lista", :controller => "lista", :action => "create"
+
+  # READ
+  get "/lista", :controller => "lista", :action => "index"
+  get "/lista/:id", :controller => "lista", :action => "show"
+
+  # UPDATE
+  get "/lista/:id/edit", :controller => "lista", :action => "edit"
+  post "/update_lista/:id", :controller => "lista", :action => "update"
+
+  # DELETE
+  get "/delete_lista/:id", :controller => "lista", :action => "destroy"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
